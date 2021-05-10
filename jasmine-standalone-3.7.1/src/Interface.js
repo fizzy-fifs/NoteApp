@@ -24,41 +24,4 @@ document.addEventListener("DOMContentLoaded", ()=>{
 
         document.querySelectorAll("li")[noteNumber - 1].innerText = expandedNote
     })
-
-
-
-
-
-
-    // const addItem = () => {
-
-    // }
-
-    // showButton.addEventListener("click", ()=> {
-    //     showFullItem(1)
-    // })
-
-
-
-
-
-
-
-
-    // const abreviatedList = (list) => {
-    //     let abv = []
-    //     list.forEach(item => {abv.push(item.innerText.substr(0, 20))})
-    // }
-
-    // abreviatedList(noteList)
-
-    // const showFullItem = (number) => {
-    //    console.log(originalList[number-1].innerText)
-    // }
-
-    // showButton.addEventListener("click", ()=> {
-    //     showFullItem(1)
-    // })
-
-
 })
