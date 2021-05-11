@@ -1,4 +1,4 @@
-"use stricts";
+// "use stricts";
 
 document.addEventListener("DOMContentLoaded", ()=>{
 
