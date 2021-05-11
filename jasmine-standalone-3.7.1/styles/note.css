@@ -10,13 +10,12 @@
 
 html {
     width: 100%;
-    
+  
 }
+
 body {
     height: 100%;
-    background-color: #f5a25d;
-
-}
+    background-color: #a3d2ca;}
 
 .noteapp-container {
     display: grid;
@@ -32,17 +31,74 @@ header > h1 {
 }
 
 li {
+    color: #0a043c;
     border: 40px;
-    border-color: black;
+    border-color: #0a043c;
     border-radius: 10px;
-    margin: 30px;
+    margin: 40px;
     font-family: 'Anton', sans-serif;
+    background-color: #d3e0ea;
+    border-style: groove;
+    border-width: 2px;
+    height: auto;
+    padding: 2px;
+
 }
 
 main {
     display: flex;
     align-items: center;
     justify-content: center;
+}
+
+.write-note, .selection {
+    font-family: 'Anton', sans-serif;
+}
+
+.note-import { 
+    height: 100px;
+    width: 450px;
+    margin: 7px;
+    border-radius: 7px;
+    font-family: 'Gochi Hand', cursive;
+    font-size: 25px;
+}
+
+.submit-note {
+    background-color: #3d84b8;
+    color: #ffe227;
+    border: none;
+    border-radius: 12px;
+    height: 25px;
+    width: 100px;
+    font-size: larger
+}
+
+.item-number {
+    width: 50px;
+    margin: 7px;
+    border-radius: 12px;
+    text-align: center;
+}
+
+.item-number:hover {
+    cursor: pointer;
+}
+
+.expand-button {
+    background-color: #3d84b8;
+    color: #ffe227;
+    border: none;
+    border-radius: 12px;
+    height: 25px;
+    width: 100px;
+    font-size: larger
+}
+
+.submit-note:hover, .expand-button:hover {
+    background-color: #687980;
+    color: #fb3640;
+    cursor: pointer;
 }
 
 footer {
