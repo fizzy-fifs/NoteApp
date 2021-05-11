@@ -15,6 +15,7 @@ document.addEventListener("DOMContentLoaded", ()=>{
         currentNote = document.createElement("li")
         currentNote.textContent = noteapp.show20Chars(noteapp.list.length)
         document.querySelector("ol").append(currentNote)
+        document.querySelector(".note-import").value = ""
     })
 
 
