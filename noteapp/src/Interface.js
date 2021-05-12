@@ -1,4 +1,4 @@
-// "use stricts";
+"use stricts";
 
 document.addEventListener("DOMContentLoaded", ()=>{
 
@@ -25,4 +25,21 @@ document.addEventListener("DOMContentLoaded", ()=>{
 
         document.querySelectorAll("li")[noteNumber - 1].innerText = expandedNote
     })
+
+    showDogPic = async() => {
+        let dogSrc = await fetch("https://dog.ceo/api/breeds/image/random")
+        .then(res => res.json()).then(myPhoto => myPhoto.message)
+
+        let thePic = document.createElement("img")                   
+        thePic.src = dogSrc
+        document.querySelector("ol").append(thePic)
+    }
+
+    showDogPic()
+
+    
+
+
+  
+
 })

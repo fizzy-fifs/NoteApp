@@ -1,4 +1,4 @@
-// "use strict"; 
+"use stricts";
 
 class Noteapp {
     constructor() {
