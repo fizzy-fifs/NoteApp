@@ -16,13 +16,13 @@ document.addEventListener("DOMContentLoaded", ()=>{
         currentNote.textContent = noteapp.show20Chars(noteapp.list.length)
         document.querySelector("ol").append(currentNote)
         document.querySelector(".note-import").value = ""
-    })
+    })       
 
 
 
     expandButton.addEventListener("click", ()=> {
         let noteNumber = document.querySelector(".item-number").value
-        let expandedNote = createEmoji(noteapp.showEntireNote(noteNumber))
+        let expandedNote = noteapp.showEntireNote(noteNumber)
 
         document.querySelectorAll("li")[noteNumber - 1].innerText = expandedNote
     })
