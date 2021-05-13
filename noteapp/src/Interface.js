@@ -16,17 +16,18 @@ document.addEventListener("DOMContentLoaded", ()=>{
         currentNote.textContent = noteapp.show20Chars(noteapp.list.length)
         document.querySelector("ol").append(currentNote)
         document.querySelector(".note-import").value = ""
-    })
+    })        // console.log(createEmoji(note))
+
 
 
     expandButton.addEventListener("click", ()=> {
         let noteNumber = document.querySelector(".item-number").value
-        let expandedNote = noteapp.showEntireNote(noteNumber)
+        let expandedNote = createEmoji(noteapp.showEntireNote(noteNumber))
 
         document.querySelectorAll("li")[noteNumber - 1].innerText = expandedNote
     })
 
-    // showDogPic = async() => {
+// showDogPic = async() => {
     //     let dogSrc = await fetch("https://dog.ceo/api/breeds/image/random")
     //     .then(res => res.json()).then(myPhoto => myPhoto.message)
 
@@ -36,7 +37,6 @@ document.addEventListener("DOMContentLoaded", ()=>{
     // }
 
     // showDogPic()
-
     createEmoji = async(text) => {
        let jsonText = JSON.parse(`{ "text": "${text}" }`)
         let response = await fetch('https://makers-emojify.herokuapp.com/', {
@@ -65,4 +65,3 @@ document.addEventListener("DOMContentLoaded", ()=>{
 
 
 })
-
