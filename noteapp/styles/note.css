@@ -15,7 +15,8 @@ html {
 
 body {
     height: 100%;
-    background-color: #a3d2ca;}
+    background-color: #007580;
+    font-family: 'Fredoka One', cursive;}
 
 .noteapp-container {
     display: grid;
@@ -26,7 +27,8 @@ header > h1 {
     display: flex;
     align-items: center;
     justify-content: center;
-    font-family: 'Anton', sans-serif;
+    font-family: 'Fredoka One', cursive;
+    color: #ffbe0f;
     margin: 60px;
 
 }
@@ -37,7 +39,7 @@ li {
     border-color: #0a043c;
     border-radius: 10px;
     margin: 40px;
-    font-family: 'Anton', sans-serif;
+    font-family: 'Kalam', cursive;
     background-color: #d3e0ea;
     border-style: groove;
     border-width: 2px;
@@ -53,7 +55,7 @@ main {
 }
 
 .write-note, .selection {
-    font-family: 'Anton', sans-serif;
+    font-family: 'Fredoka One', cursive;
 }
 
 .note-import { 
@@ -61,12 +63,12 @@ main {
     width: 450px;
     margin: 7px;
     border-radius: 7px;
-    font-family: 'Gochi Hand', cursive;
     font-size: 25px;
+    font-family: 'Kalam', cursive;
 }
 
 .submit-note {
-    background-color: #3d84b8;
+    background-color: #0d335d;
     color: #ffe227;
     border: none;
     border-radius: 12px;
@@ -87,7 +89,7 @@ main {
 }
 
 .expand-button {
-    background-color: #3d84b8;
+    background-color: #0d335d;
     color: #ffe227;
     border: none;
     border-radius: 12px;
@@ -107,5 +109,6 @@ footer {
     align-items: center;
     justify-content: center;
     margin: 80px;
-    font-family: 'Anton', sans-serif;
+    color: #ffbe0f;
+    font-family: 'Fredoka One', cursive;
 }
