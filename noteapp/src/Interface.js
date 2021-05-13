@@ -9,7 +9,6 @@ document.addEventListener("DOMContentLoaded", ()=>{
     let newNoteButton = document.querySelector(".submit-note")
     let myLocalStorage = window.localStorage
 
-
     showNotesOnLoad = () => {
         let notes = Object.values(myLocalStorage)
         notes.forEach(note => noteapp.createNote(note))
@@ -22,16 +21,15 @@ document.addEventListener("DOMContentLoaded", ()=>{
 
     showNotesOnLoad()
 
-
     newNoteButton.addEventListener("click", async()=> {
         let note = await createEmoji(document.querySelector(".note-import").value)
         noteapp.createNote(note)
         localStorageSave(note)
-        addNote()
+        addNoteElement()
         document.querySelector(".note-import").value = ""
     }) 
     
-    addNote = () => {
+    addNoteElement = () => {
         currentNote = document.createElement("li")
         currentNote.textContent = noteapp.show20Chars(noteapp.list.length)
         document.querySelector("ol").append(currentNote)
@@ -40,8 +38,6 @@ document.addEventListener("DOMContentLoaded", ()=>{
     localStorageSave = (note) => {
         window.localStorage.setItem(`note_${noteapp.list.indexOf(note)+1}`, note)
     }
-
-
 
     expandButton.addEventListener("click", ()=> {
         let noteNumber = document.querySelector(".item-number").value
