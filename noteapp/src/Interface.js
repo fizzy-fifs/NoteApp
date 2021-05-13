@@ -26,7 +26,7 @@ document.addEventListener("DOMContentLoaded", ()=>{
     newNoteButton.addEventListener("click", async()=> {
         let note = await createEmoji(document.querySelector(".note-import").value)
         noteapp.createNote(note)
-        window.localStorage.setItem(`note_${noteapp.list.indexOf(note)+1}`, note)
+        localStorageSave(note)
         addNote()
         document.querySelector(".note-import").value = ""
     }) 
@@ -35,6 +35,10 @@ document.addEventListener("DOMContentLoaded", ()=>{
         currentNote = document.createElement("li")
         currentNote.textContent = noteapp.show20Chars(noteapp.list.length)
         document.querySelector("ol").append(currentNote)
+    }
+
+    localStorageSave = (note) => {
+        window.localStorage.setItem(`note_${noteapp.list.indexOf(note)+1}`, note)
     }
 
 
