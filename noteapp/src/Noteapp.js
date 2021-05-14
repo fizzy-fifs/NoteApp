@@ -16,4 +16,8 @@ class Noteapp {
     showEntireNote(noteNumber) {
         return this.list[noteNumber - 1]
      }
+
+     deleteNote(noteNumber){
+         this.list.splice(noteNumber-1, 1)
+     }
 }

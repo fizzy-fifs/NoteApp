@@ -6,16 +6,19 @@ document.addEventListener("DOMContentLoaded", ()=>{
     let originalList = document.querySelectorAll('li')
     let noteList = document.querySelectorAll('li')
     let expandButton = document.querySelector(".expand-button")
+    let deleteButton = document.querySelector(".delete-button")
     let newNoteButton = document.querySelector(".submit-note")
     let myLocalStorage = window.localStorage
 
     getLocalStorage = () => {
       let notes = []
-      for (i = 1; i <= myLocalStorage.length; i++){
-        notes.push(myLocalStorage.getItem(`note_${i}`))
+      for (i = 1; i <= myLocalStorage.length+50; i++){
+      if(myLocalStorage[`note_${i}`]) {
+        notes.push(myLocalStorage[`note_${i}`])
       }
-      return notes
     }
+    return notes
+}
 
     showNotesOnLoad = () => {
         let notes = getLocalStorage()
@@ -52,6 +55,14 @@ document.addEventListener("DOMContentLoaded", ()=>{
         let expandedNote = noteapp.showEntireNote(noteNumber)
 
         document.querySelectorAll("li")[noteNumber - 1].innerText = expandedNote
+    })
+
+    deleteButton.addEventListener("click", ()=> {
+        let noteNumber = document.querySelector(".item-number").value
+        noteapp.deleteNote(noteNumber)
+        myLocalStorage.removeItem(`note_${noteNumber}`)
+        let the_list = document.querySelectorAll("li")[noteNumber-1]
+        the_list.parentNode.removeChild(the_list)
     })
 
     createEmoji = (text) => {

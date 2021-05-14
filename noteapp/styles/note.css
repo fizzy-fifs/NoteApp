@@ -89,7 +89,7 @@ main {
     cursor: pointer;
 }
 
-.expand-button {
+.expand-button, .delete-button {
     background-color: #0d335d;
     color: #ffe227;
     border: none;
@@ -99,7 +99,7 @@ main {
     font-size: larger
 }
 
-.submit-note:hover, .expand-button:hover {
+.submit-note:hover, .expand-button:hover, .delete-button:hover {
     background-color: #687980;
     color: #fb3640;
     cursor: pointer;
