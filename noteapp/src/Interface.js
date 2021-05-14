@@ -9,8 +9,16 @@ document.addEventListener("DOMContentLoaded", ()=>{
     let newNoteButton = document.querySelector(".submit-note")
     let myLocalStorage = window.localStorage
 
+    getLocalStorage = () => {
+      let notes = []
+      for (i = 1; i <= myLocalStorage.length; i++){
+        notes.push(myLocalStorage.getItem(`note_${i}`))
+      }
+      return notes
+    }
+
     showNotesOnLoad = () => {
-        let notes = Object.values(myLocalStorage)
+        let notes = getLocalStorage()
         notes.forEach(note => noteapp.createNote(note))
         for (item of noteapp.list) {
            eachNote = document.createElement("li")
@@ -60,5 +68,7 @@ document.addEventListener("DOMContentLoaded", ()=>{
      }
 
 
+
+     
 })
 
